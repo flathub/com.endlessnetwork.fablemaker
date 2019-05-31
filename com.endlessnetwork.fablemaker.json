@@ -26,18 +26,18 @@
         {
           "type": "git",
           "url": "https://github.com/endless-network/Fablemaker_Binary.git",
-          "commit": "000a3bca06110c7f3dbd50305edadf8eea56fb22"
+          "commit": "91c58c43536aa73005cd5141f9ea3a7ee83c3a15"
         },
         {
           "type": "archive",
-          "url": "https://github.com/endless-network/Fablemaker_Binary/releases/download/v1.1.1/Fablemaker.zip",
-          "sha256": "519a4906ae585515de94376dd72e3ca7a5ca43fe34e12fd4d0ef77fe1762e3f7"
+          "url": "https://github.com/endless-network/Fablemaker_Binary/releases/download/v1.2/Fablemaker_v32_Lin.zip",
+          "sha256": "30607590a6311c47813576e361bfe42ef22d7a69ab8d46359d2ec0b26557ab59"
         },
         {
           "dest-filename": "com.endlessnetwork.fablemaker.sh",
           "type": "script",
           "commands": [
-            "exec /app/bin/Fablemaker.x86_64"
+            "exec /app/bin/Fablemaker_32.x86_64"
           ]
         }
       ],
@@ -47,8 +47,8 @@
         "install -Dm644 FM_Favicon_128x128.png /app/share/icons/hicolor/128x128/apps/com.endlessnetwork.fablemaker.png",
         "install -Dm644 FM_Favicon_64x64.png /app/share/icons/hicolor/64x64/apps/com.endlessnetwork.fablemaker.png",
         "install -D com.endlessnetwork.fablemaker.sh /app/bin/com.endlessnetwork.fablemaker.sh",
-        "mv Fablemaker_Data /app/bin/",
-        "install Fablemaker.x86_64 /app/bin/Fablemaker.x86_64"
+        "mv Fablemaker_32_Data /app/bin/",
+        "install Fablemaker_32.x86_64 /app/bin/Fablemaker_32.x86_64"
       ]
     }
   ]

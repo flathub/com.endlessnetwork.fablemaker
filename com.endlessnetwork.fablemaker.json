@@ -1,7 +1,7 @@
 {
   "id": "com.endlessnetwork.fablemaker",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "21.08",
+  "runtime-version": "23.08",
   "sdk": "org.freedesktop.Sdk",
   "build-options": {
     "strip": true,
@@ -26,7 +26,7 @@
         {
           "type": "git",
           "url": "https://github.com/endless-network/Fablemaker_Binary.git",
-          "commit": "5af4b0c768585f3bce8b1bd879fac9185029ac42"
+          "commit": "00dab0a35de9a604512d81e56b3c6ce718571a7c"
         },
         {
           "type": "archive",

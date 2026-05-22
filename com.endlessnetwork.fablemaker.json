@@ -7,6 +7,8 @@
     "strip": true,
     "no-debuginfo": true
   },
+  "command": "com.endlessnetwork.fablemaker.sh",
+  "tags": ["proprietary"],
   "separate-locales": false,
   "finish-args": [
     "--share=ipc",
@@ -14,13 +16,18 @@
     "--socket=pulseaudio",
     "--device=dri"
   ],
-  "command": "com.endlessnetwork.fablemaker.sh",
   "modules": [
     {
       "name": "Fablemaker",
       "buildsystem": "simple",
-      "only-arches": [
-        "x86_64"
+      "build-commands": [
+        "install -Dm644 com.endlessnetwork.fablemaker.desktop -t /app/share/applications/",
+        "install -Dm644 com.endlessnetwork.fablemaker.appdata.xml -t /app/share/metainfo/",
+        "install -Dm644 FM_Favicon_128x128.png /app/share/icons/hicolor/128x128/apps/com.endlessnetwork.fablemaker.png",
+        "install -Dm644 FM_Favicon_64x64.png /app/share/icons/hicolor/64x64/apps/com.endlessnetwork.fablemaker.png",
+        "install -D com.endlessnetwork.fablemaker.sh -t /app/bin/",
+        "mv Fablemaker_32_Data /app/bin/",
+        "install Fablemaker_32.x86_64 /app/bin/Fablemaker_32.x86_64"
       ],
       "sources": [
         {
@@ -40,15 +47,6 @@
             "exec /app/bin/Fablemaker_32.x86_64"
           ]
         }
-      ],
-      "build-commands": [
-        "install -Dm644 com.endlessnetwork.fablemaker.desktop /app/share/applications/com.endlessnetwork.fablemaker.desktop",
-        "install -Dm644 com.endlessnetwork.fablemaker.appdata.xml /app/share/appdata/com.endlessnetwork.fablemaker.appdata.xml",
-        "install -Dm644 FM_Favicon_128x128.png /app/share/icons/hicolor/128x128/apps/com.endlessnetwork.fablemaker.png",
-        "install -Dm644 FM_Favicon_64x64.png /app/share/icons/hicolor/64x64/apps/com.endlessnetwork.fablemaker.png",
-        "install -D com.endlessnetwork.fablemaker.sh /app/bin/com.endlessnetwork.fablemaker.sh",
-        "mv Fablemaker_32_Data /app/bin/",
-        "install Fablemaker_32.x86_64 /app/bin/Fablemaker_32.x86_64"
       ]
     }
   ]
